@@ -1,1 +1,7 @@
-<p>user works!</p>
+<div class="user-list">
+    <app-user-item 
+    *ngFor="let user of users" 
+    [user]="user"
+    (selected)="onUserClicked($event)">
+    </app-user-item>
+</div>

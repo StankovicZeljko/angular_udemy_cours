@@ -4,6 +4,6 @@
 </div>
 
 <div class="content-wrapper">
-  <h1>Hallo Welt</h1>
-  <h1>Was geht</h1>
+  <app-user (userSelected)="selectedUserId = $event"></app-user>
+  <app-task [userId]="selectedUserId"></app-task>
 </div>

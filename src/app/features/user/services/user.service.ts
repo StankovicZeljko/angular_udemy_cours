@@ -12,5 +12,14 @@ export class UserService {
     return of (DUMMY_USERS);
   }
 
+  getUserById(id:string): Observable<User>{
+    const user = DUMMY_USERS.find(user => user.id == id);
+    if (!user) {
+      throw new Error(`User mit id=${id} nicht gefunden`)
+    }
+
+    return of(user)
+  }
+
   constructor() { }
 }
